@@ -1,9 +1,6 @@
 name: Docker CI
 
-on:
-  push:
-    tags:
-      - 'v*'
+on: push
 
 jobs:
   docker:
