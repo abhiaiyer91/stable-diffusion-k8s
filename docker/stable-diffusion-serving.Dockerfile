@@ -82,7 +82,7 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 COPY . /docker
 
 RUN <<EOF
-python3 /docker/info.py ${ROOT}/modules/ui.py
+python3 ${ROOT}/modules/ui.py
 mv ${ROOT}/style.css ${ROOT}/user.css
 EOF
 
