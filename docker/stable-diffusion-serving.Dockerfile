@@ -5,9 +5,9 @@ ARG PATH="/root/miniconda3/bin:${PATH}"
 RUN 
 
 
-# RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && \
-#     apt-get install -y curl wget fonts-dejavu-core rsync git libglib2.0-0 && \
-#     apt-get clean
+RUN export DEBIAN_FRONTEND=noninteractive && apt-get update && \
+    apt-get install -y curl wget fonts-dejavu-core rsync git libglib2.0-0 && \
+    apt-get clean
     
 RUN distribution=$(. /etc/os-release;echo $ID$VERSION_ID) \
       && curl -fsSL https://nvidia.github.io/libnvidia-container/gpgkey | gpg --dearmor -o /usr/share/keyrings/nvidia-container-toolkit-keyring.gpg \
